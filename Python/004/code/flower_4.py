@@ -1,8 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import cm
+from mpl_toolkits.mplot3d import Axes3D
 
 fig = plt.figure()
-ax = fig.gca(projection='3d')
+ax = fig.add_axes(Axes3D(fig))
+
 # 将相位向后移动了6*pi
 [x, t] = np.meshgrid(
     np.array(range(25)) / 24.0,
